@@ -1,18 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
-website = "https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/?curator_clanid=1541443"
-resultado = requests.get(website)
-content = resultado.text
-
-print(content)
-
-
-import requests
-from bs4 import BeautifulSoup
-
 # URL de la página web
-url = 'https://example.com'
+url = 'https://store.steampowered.com/app/2395210/Tony_Hawks_Pro_Skater_1__2/'
 
 # Realizar la solicitud HTTP a la página web
 response = requests.get(url)
@@ -23,7 +13,7 @@ if response.status_code == 200:
     soup = BeautifulSoup(response.content, 'html.parser')
     
     # Buscar el div con la clase específica (por ejemplo, "mi-clase")
-    div_content = soup.find('div', class_='mi-clase')
+    div_content = soup.find('div', class_='discount_original_price')
     
     # Si se encuentra el div, imprimir su contenido
     if div_content:
